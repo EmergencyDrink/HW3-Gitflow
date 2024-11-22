@@ -10,6 +10,12 @@ form.addEventListener('submit', (event)=>{
     const apellido = document.getElementById('apellido').value;
     const matricula = document.getElementById('matricula').value;
     const nota = document.getElementById('nota').value;
+
+    // Validaciones
+    if (!nombre || !apellido || !matricula || !nota) {
+        alert('Por favor, completa todos los campos');
+        return;
+    }
         
     //Agregar
     const fila = document.createElement('tr');
